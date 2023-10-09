@@ -15,10 +15,10 @@ public class TestSingleton {
         float moy = Arithmetique.getInstance().moyenne(2, 5);
         System.out.printf("la moyenne est %f \n",moy);
 
-        Arithmetique s1 = Arithmetique.getInstance(2, 5);
+        Arithmetique s1 = Arithmetique.getInstance(8, 3);
         s1.affiche();
 
-        Arithmetique s2 = Arithmetique.getInstance(8, 3);
+        Arithmetique s2 = Arithmetique.getInstance(5, 9);
         s2.affiche();
     }
 }
