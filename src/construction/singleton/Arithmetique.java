@@ -5,16 +5,25 @@ public final class Arithmetique {
 
     private int x;
     private int y;
-    //private String nom;
+
+    private String nom;
 
 
     public Arithmetique() {
         super();
+        nom = "Math";
     }
 
     public Arithmetique(int x, int y) {
         this.x = x;
         this.y = y;
+        nom = "Math";
+    }
+
+    public Arithmetique(int x, int y, String nom) {
+        this.x = x;
+        this.y = y;
+        this.nom = nom;
     }
 
     public static Arithmetique getInstance() {
@@ -27,6 +36,13 @@ public final class Arithmetique {
     public static Arithmetique getInstance(int x, int y) {
         if (instance == null) {
             return new Arithmetique(x, y);
+        }
+        return instance;
+    }
+
+    public static Arithmetique getInstance(int x, int y, String name) {
+        if (instance == null) {
+            return new Arithmetique(x, y, name);
         }
         return instance;
     }
@@ -48,7 +64,7 @@ public final class Arithmetique {
     }
 
     public void affiche() {
-        System.out.println("\nJe suis une instance mes valeurs sont : x = " + this.x + " et y = " + this.y);
+        System.out.println("\nJe suis une instance mes valeurs sont : x = " + this.x + " , y = " + this.y+ " et nom = " + this.nom);
     }
 
     @Override
