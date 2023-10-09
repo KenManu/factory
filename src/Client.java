@@ -1,18 +1,24 @@
+public class Client {
+    public static void main(String[] args) {
+
+        produitFactory produitFactory1 = new produitFactory1();
+        produitFactory produitFactory2 = new produitFactory2();
+        produitFactory produitFactory3 = new produitFactory3();
+
+        produitA produitA = null;
+
+        System.out.println("utilisation de la premiere fabrique ");
+        produitA = produitFactory1.getProduitA();
+        produitA.methodeA();
 
 
-    public class Client {
-        public  static  void main (String[] args){
-            produitFactory produitFactory = new produitFactory();
+        System.out.println("utilisation de la deuxieme fabrique ");
+        produitA = produitFactory2.getProduitA();
+        produitA.methodeA();
 
-            produitA produitA = null;
-            produitA = produitFactory.getProduitA(produitFactory.TYPE_PRODUITA1);
-            produitA.methodeA();
 
-            produitA = produitFactory.getProduitA(produitFactory.TYPE_PRODUITA2);
-            produitA.methodeA();
-
-            produitA = produitFactory.getProduitA(produitFactory.TYPE_PRODUITA3);
-            produitA.methodeA();
-
-        }
+        System.out.println("utilisation de la deuxieme fabrique ");
+        produitA = produitFactory3.getProduitA();
+        produitA.methodeA();
     }
+}
